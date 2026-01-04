@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   background: "#f8fafc" !important;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+/* .ant-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ant-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+} */
+
+
+.ant-card ul li {
+  margin-bottom: 6px;
+}
+.ant-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ant-card:hover {
+  transform: translateY(-4px);
+}
+/* Hide hamburger on desktop */
+.mobile-menu-icon {
+  display: none;
+}
+
+/* Hide desktop menu on mobile */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+}
