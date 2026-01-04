@@ -10,7 +10,7 @@ const sectionStyle = {
 };
 
 // 🔴 CHANGE THIS TO YOUR RENDER BACKEND URL
-const API_URL = "https://portfolio-backend.onrender.com/api/contact";
+const API_URL = "https://portfolio-be-eyih.onrender.com/api/contact";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
