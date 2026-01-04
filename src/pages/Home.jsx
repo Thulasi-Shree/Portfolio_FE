@@ -47,8 +47,10 @@ export default function Home() {
                 >
 
                     {/* LEFT: TEXT */}
-                    <Col xs={24} md={13} style={{ marginTop:"20px",
-                                marginBottom: "20px",}}>
+                    <Col xs={24} md={13} style={{
+                        marginTop: "20px",
+                        marginBottom: "20px",
+                    }}>
 
 
 
@@ -77,14 +79,22 @@ export default function Home() {
                                 optimization.
                             </Paragraph>
 
-                            <Space>
+                            <Space wrap>
                                 <Button type="primary" size="large" href="/projects">
                                     View Projects
                                 </Button>
-                                <Button size="large" href="/contact">
-                                    Contact Me
+
+
+                                <Button
+                                    size="large"
+                                    type="default"
+                                    href="/resume/Thulasi_Shree_Ganesan_Resume.pdf"
+                                    target="_blank"
+                                >
+                                    View Resume
                                 </Button>
                             </Space>
+
                         </Space>
                     </Col>
                     <Col
@@ -101,7 +111,7 @@ export default function Home() {
                             preview={false}
                             style={{
                                 width: "100%",
-                                marginTop:"20px",
+                                marginTop: "20px",
                                 marginBottom: "20px",
                                 maxWidth: "280px",
                                 borderRadius: "20px",
@@ -113,156 +123,186 @@ export default function Home() {
                 </Row>
             </div>
 
-            {/* WHAT I DO */}
-            <section style={sectionStyle}>
-                <Title style={{color: "#1677ff"}} level={2}>What I Do ?</Title>
+           {/* WHAT I DO */}
+<section style={sectionStyle}>
+  <Title style={{ color: "#1677ff" }} level={2}>
+    What I Do ?
+  </Title>
 
-                <Row gutter={[24, 24]}>
-                    <Col xs={24} md={8}>
-                        <Card
-                            hoverable
-                            style={{ borderRadius: "12px" }}
-                            bodyStyle={{ padding: "24px" }}
-                        >
-                            <CodeOutlined style={{ fontSize: "32px", color: "#1677ff" }} />
-                            <Title level={4} style={{ marginTop: "16px"}}>
-                                Frontend Development
-                            </Title>
-                            <Paragraph>
-                                Build responsive, accessible and user-friendly interfaces using
-                                React, modern JavaScript and component-based architecture.
-                            </Paragraph>
-                        </Card>
-                    </Col>
+  <Row gutter={[24, 24]} align="stretch">
+    {/* FRONTEND */}
+    <Col xs={24} md={8} style={{ display: "flex" }}>
+      <Card
+        hoverable
+        style={{
+          borderRadius: "12px",
+          width: "100%",
+          height: "100%"
+        }}
+        bodyStyle={{
+          padding: "24px",
+          display: "flex",
+          flexDirection: "column"
+        }}
+      >
+        <CodeOutlined style={{ fontSize: "32px", color: "#1677ff" }} />
+        <Title level={4} style={{ marginTop: "16px", color: "#1677ff" }}>
+          Frontend Development
+        </Title>
+        <Paragraph style={{ flexGrow: 1 }}>
+          Build responsive, accessible and user-friendly interfaces using
+          React, modern JavaScript and component-based architecture.
+        </Paragraph>
+      </Card>
+    </Col>
 
-                    <Col xs={24} md={8}>
-                        <Card
-                            hoverable
-                            style={{ borderRadius: "12px" }}
-                            bodyStyle={{ padding: "24px" }}
-                        >
-                            <DatabaseOutlined style={{ fontSize: "32px", color: "#1677ff" }} />
-                            <Title level={4} style={{ marginTop: "16px" }}>
-                                Backend Development
-                            </Title>
-                            <Paragraph>
-                                Design REST APIs, handle authentication, manage databases and
-                                build scalable backend systems using Node.js, Express and MongoDB.
-                            </Paragraph>
-                        </Card>
-                    </Col>
+    {/* BACKEND */}
+    <Col xs={24} md={8} style={{ display: "flex" }}>
+      <Card
+        hoverable
+        style={{
+          borderRadius: "12px",
+          width: "100%",
+          height: "100%"
+        }}
+        bodyStyle={{
+          padding: "24px",
+          display: "flex",
+          flexDirection: "column"
+        }}
+      >
+        <DatabaseOutlined style={{ fontSize: "32px", color: "#1677ff" }} />
+        <Title level={4} style={{ marginTop: "16px", color: "#1677ff" }}>
+          Backend Development
+        </Title>
+        <Paragraph style={{ flexGrow: 1 }}>
+          Design REST APIs, handle authentication, manage databases and build
+          scalable backend systems using Node.js, Express and MongoDB.
+        </Paragraph>
+      </Card>
+    </Col>
 
-                    <Col xs={24} md={8}>
-                        <Card
-                            hoverable
-                            style={{ borderRadius: "12px" }}
-                            bodyStyle={{ padding: "24px" }}
-                        >
-                            <CloudOutlined style={{ fontSize: "32px", color: "#1677ff" }} />
-                            <Title level={4} style={{ marginTop: "16px" }}>
-                                Cloud & DevOps
-                            </Title>
-                            <Paragraph>
-                                Deploy applications on AWS, configure servers, manage environments,
-                                and implement CI/CD pipelines for smooth releases.
-                            </Paragraph>
-                        </Card>
-                    </Col>
-                </Row>
-            </section>
+    {/* CLOUD */}
+    <Col xs={24} md={8} style={{ display: "flex" }}>
+      <Card
+        hoverable
+        style={{
+          borderRadius: "12px",
+          width: "100%",
+          height: "100%"
+        }}
+        bodyStyle={{
+          padding: "24px",
+          display: "flex",
+          flexDirection: "column"
+        }}
+      >
+        <CloudOutlined style={{ fontSize: "32px", color: "#1677ff" }} />
+        <Title level={4} style={{ marginTop: "16px", color: "#1677ff" }}>
+          Cloud & DevOps
+        </Title>
+        <Paragraph style={{ flexGrow: 1 }}>
+          Deploy applications on AWS, configure servers, manage environments,
+          and implement CI/CD pipelines for smooth releases.
+        </Paragraph>
+      </Card>
+    </Col>
+  </Row>
+</section>
+
 
 
             {/* TECH STACK */}
             <section style={sectionStyle} >
-                <Title style={{color: "#1677ff"}} level={2}>Tech Stack</Title>
+                <Title style={{ color: "#1677ff" }} level={2}>Tech Stack</Title>
 
                 <Row gutter={[24, 24]} align="stretch">
-          {/* FRONTEND */}
-          <Col xs={24} md={8}>
-            <Card
-              hoverable
-              style={{
-                borderRadius: "14px",
-                background: "#020617",
-                color: "#e5e7eb",
-                height: "100%"
-              }}
-              bodyStyle={{ padding: "28px" }}
-            >
-              <Title level={4} style={{ color: "#38bdf8" }}>
-                Frontend
-              </Title>
-              <ul style={{ paddingLeft: "18px", color: "#cbd5f5" }}>
-                <li>React.js</li>
-                <li>JavaScript (ES6+)</li>
-                <li>TypeScript</li>
-                <li>Redux</li>
-                <li>Bootstrap</li>
-                <li>HTML5, CSS3</li>
-                <li>Ant Design</li>
-              </ul>
-            </Card>
-          </Col>
+                    {/* FRONTEND */}
+                    <Col xs={24} md={8}>
+                        <Card
+                            hoverable
+                            style={{
+                                borderRadius: "14px",
+                                background: "#020617",
+                                color: "#e5e7eb",
+                                height: "100%"
+                            }}
+                            bodyStyle={{ padding: "28px" }}
+                        >
+                            <Title level={4} style={{ color: "#38bdf8" }}>
+                                Frontend
+                            </Title>
+                            <ul style={{ paddingLeft: "18px", color: "#cbd5f5" }}>
+                                <li>React.js</li>
+                                <li>JavaScript (ES6+)</li>
+                                <li>TypeScript</li>
+                                <li>Redux</li>
+                                <li>Bootstrap</li>
+                                <li>HTML5, CSS3</li>
+                                <li>Ant Design</li>
+                            </ul>
+                        </Card>
+                    </Col>
 
-          {/* BACKEND */}
-          <Col xs={24} md={8}>
-            <Card
-              hoverable
-              style={{
-                borderRadius: "14px",
-                background: "#020617",
-                color: "#e5e7eb",
-                height: "100%"
-              }}
-              bodyStyle={{ padding: "28px" }}
-            >
-              <Title level={4} style={{ color: "#1677ff" }}>
-                Backend
-              </Title>
-              <ul style={{ paddingLeft: "18px", color: "#cbd5f5" }}>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>RESTful API Development</li>
-                <li>MongoDB</li>
-                <li>JWT Authentication (Encryption & Decryption)</li>
-                <li>WebSockets</li>
-                <li>Cron Automation</li>
-                <li>Stripe Payment Integration</li>
-                <li>Twilio (SMS & OTP)</li>
-                <li>SQL (Basic Queries)</li>
-                <li>Java & Python (Basics)</li>
-              </ul>
-            </Card>
-          </Col>
+                    {/* BACKEND */}
+                    <Col xs={24} md={8}>
+                        <Card
+                            hoverable
+                            style={{
+                                borderRadius: "14px",
+                                background: "#020617",
+                                color: "#e5e7eb",
+                                height: "100%"
+                            }}
+                            bodyStyle={{ padding: "28px" }}
+                        >
+                            <Title level={4} style={{ color: "#1677ff" }}>
+                                Backend
+                            </Title>
+                            <ul style={{ paddingLeft: "18px", color: "#cbd5f5" }}>
+                                <li>Node.js</li>
+                                <li>Express.js</li>
+                                <li>RESTful API Development</li>
+                                <li>MongoDB</li>
+                                <li>JWT Authentication (Encryption & Decryption)</li>
+                                <li>WebSockets</li>
+                                <li>Cron Automation</li>
+                                <li>Stripe Payment Integration</li>
+                                <li>Twilio (SMS & OTP)</li>
+                                <li>SQL (Basic Queries)</li>
+                                <li>Java & Python (Basics)</li>
+                            </ul>
+                        </Card>
+                    </Col>
 
-          {/* CLOUD & TOOLS */}
-          <Col xs={24} md={8}>
-            <Card
-              hoverable
-              style={{
-                borderRadius: "14px",
-                background: "#020617",
-                color: "#e5e7eb",
-                height: "100%"
-              }}
-              bodyStyle={{ padding: "28px" }}
-            >
-              <Title level={4} style={{ color: "#1677ff" }}>
-                Cloud & Tools
-              </Title>
-              <ul style={{ paddingLeft: "18px", color: "#cbd5f5" }}>
-                <li>AWS EC2 & S3</li>
-                <li>Docker</li>
-                <li>Kubernetes (Basics)</li>
-                <li>Linux (Basics)</li>
-                <li>CI/CD (Basics)</li>
-                <li>Git & GitHub</li>
-                <li>Vercel & Render Deployment</li>
-                <li>Postman & API Testing</li>
-              </ul>
-            </Card>
-          </Col>
-        </Row>
+                    {/* CLOUD & TOOLS */}
+                    <Col xs={24} md={8}>
+                        <Card
+                            hoverable
+                            style={{
+                                borderRadius: "14px",
+                                background: "#020617",
+                                color: "#e5e7eb",
+                                height: "100%"
+                            }}
+                            bodyStyle={{ padding: "28px" }}
+                        >
+                            <Title level={4} style={{ color: "#1677ff" }}>
+                                Cloud & Tools
+                            </Title>
+                            <ul style={{ paddingLeft: "18px", color: "#cbd5f5" }}>
+                                <li>AWS EC2 & S3</li>
+                                <li>Docker</li>
+                                <li>Kubernetes (Basics)</li>
+                                <li>Linux (Basics)</li>
+                                <li>CI/CD (Basics)</li>
+                                <li>Git & GitHub</li>
+                                <li>Vercel & Render Deployment</li>
+                                <li>Postman & API Testing</li>
+                            </ul>
+                        </Card>
+                    </Col>
+                </Row>
             </section>
 
 
@@ -274,7 +314,7 @@ export default function Home() {
                 }}
             >
                 <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-                    <Title level={2} style={{color: "#1677ff"}}>
+                    <Title level={2} style={{ color: "#1677ff" }}>
                         Cloud & DevOps Experience
                     </Title>
 

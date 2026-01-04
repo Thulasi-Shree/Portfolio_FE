@@ -1,9 +1,9 @@
-import { Card, Tag, Typography, Row, Col, Button } from "antd";
+import { Card, Tag, Typography, Row, Col, Button, Space } from "antd";
 
 const { Title, Paragraph, Text } = Typography;
 
 const projects = [
-     {
+    {
         title: "Online Food Ordering Application",
         description:
             "An end-to-end food ordering platform with user ordering, cart management, and admin-side menu and order control.",
@@ -44,7 +44,9 @@ const projects = [
             "Ant Design",
             "Node.js",
             "Express.js",
-            "Nodemailer"
+            "Nodemailer",
+            "Render",
+            "vercel"
         ],
         type: "Full Stack Project",
         demo: "https://portfolio-fe-ten-gilt.vercel.app/"
@@ -160,8 +162,8 @@ export default function Projects() {
     return (
         <div style={{ background: "#f8fafc" }}>
             <section style={sectionStyle}>
-                <Title level={2} style={{color: "#1677ff"}}>Projects</Title>
-                <Paragraph style={{ maxWidth: "800px",  }}>
+                <Title level={2} style={{ color: "#1677ff" }}>Projects</Title>
+                <Paragraph style={{ maxWidth: "800px", }}>
                     Below are some of the key projects I have worked on, showcasing my
                     experience in full stack development, backend architecture, and cloud
                     deployment.
@@ -182,7 +184,7 @@ export default function Projects() {
                                     flexDirection: "column"
                                 }}
                             >
-                                <Title style={{color: "#1677ff"}} level={4}>{project.title}</Title>
+                                <Title style={{ color: "#1677ff" }} level={4}>{project.title}</Title>
 
                                 <Text type="secondary">{project.type}</Text>
 
@@ -190,7 +192,7 @@ export default function Projects() {
                                     {project.description}
                                 </Paragraph>
 
-                                <Paragraph strong style={{ marginBottom: "8px", color: "#1677ff"}}>
+                                <Paragraph strong style={{ marginBottom: "8px", color: "#1677ff" }}>
                                     Key Features:
                                 </Paragraph>
 
@@ -202,11 +204,14 @@ export default function Projects() {
 
                                 <div style={{ marginTop: "auto" }}>
                                     <Paragraph strong>Tech Stack:</Paragraph>
-                                    {project.tech.map((t) => (
-                                        <Tag key={t} color="blue">
-                                            {t}
-                                        </Tag>
-                                    ))}
+                                    <Space size={[8, 8]} wrap>
+                                        {project.tech.map((t) => (
+                                            <Tag key={t} color="blue">
+                                                {t}
+                                            </Tag>
+                                        ))}
+                                    </Space>
+
                                 </div>
 
                                 {/* Optional buttons – enable later */}

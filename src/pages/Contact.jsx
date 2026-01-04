@@ -1,4 +1,14 @@
-import { Form, Input, Button, Typography, Row, Col, Card, message } from "antd";
+import {
+  Form,
+  Input,
+  Button,
+  Typography,
+  Row,
+  Col,
+  Card,
+  message,
+  Alert
+} from "antd";
 import { useState } from "react";
 
 const { Title, Paragraph, Text } = Typography;
@@ -9,7 +19,6 @@ const sectionStyle = {
   padding: "60px 20px"
 };
 
-// 🔴 CHANGE THIS TO YOUR RENDER BACKEND URL
 const API_URL = "https://portfolio-be-eyih.onrender.com/api/contact";
 
 export default function Contact() {
@@ -19,6 +28,13 @@ export default function Contact() {
   const onFinish = async (values) => {
     try {
       setLoading(true);
+
+      // 👇 Friendly notice for free service delay
+      message.info({
+        content:
+          "This portfolio uses free services, so sending the message may take a few seconds. Please wait…",
+        duration: 4
+      });
 
       const response = await fetch(API_URL, {
         method: "POST",
@@ -38,7 +54,9 @@ export default function Contact() {
       form.resetFields();
     } catch (error) {
       console.error(error);
-      message.error("Something went wrong. Please try again later.");
+      message.error(
+        "Something went wrong. Please try again after some time."
+      );
     } finally {
       setLoading(false);
     }
@@ -58,14 +76,20 @@ export default function Contact() {
         </Paragraph>
 
         <Row gutter={[32, 32]} style={{ marginTop: "32px" }}>
-          {/* LEFT: CONTACT FORM */}
+          {/* CONTACT FORM */}
           <Col xs={24} md={14}>
             <Card style={{ borderRadius: "16px" }} bodyStyle={{ padding: "32px" }}>
-              <Form
-                layout="vertical"
-                onFinish={onFinish}
-                form={form}
-              >
+              
+              {/* ⚠️ Free service notice */}
+              <Alert
+                type="info"
+                showIcon
+                message="Free Service Notice"
+                description="This portfolio runs on free hosting services. Sending messages may take a few seconds. Thank you for your patience."
+                style={{ marginBottom: "16px" }}
+              />
+
+              <Form layout="vertical" onFinish={onFinish} form={form}>
                 <Form.Item
                   label="Name"
                   name="name"
@@ -102,13 +126,13 @@ export default function Contact() {
                   size="large"
                   loading={loading}
                 >
-                  {loading ? "Sending..." : "Send Message"}
+                  {loading ? "Sending… Please wait" : "Send Message"}
                 </Button>
               </Form>
             </Card>
           </Col>
 
-          {/* RIGHT: CONTACT INFO */}
+          {/* CONTACT INFO */}
           <Col xs={24} md={10}>
             <Card
               style={{ borderRadius: "16px", height: "100%" }}

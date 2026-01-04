@@ -45,7 +45,7 @@ export default function Navbar() {
         >
           {/* LOGO */}
           <Text style={{ color: "#e5e7eb", fontSize: "18px", fontWeight: 600 }}>
-            Thulasi.dev
+            Thulasi's Portfolio
           </Text>
 
           {/* DESKTOP MENU */}
