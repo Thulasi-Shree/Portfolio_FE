@@ -97,7 +97,7 @@ export default function Home() {
                     >
 
                         <Image
-                            src="/src/assets/developer-illustration.jpeg"
+                            src="/images/developer-illustration.jpeg"
                             preview={false}
                             style={{
                                 width: "100%",
