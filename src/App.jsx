@@ -15,7 +15,7 @@ function App() {
       <Layout style={{ minHeight: "100vh" }}>
         <Navbar />
 
-        <Content>
+        <Content style={{ paddingTop: "64px" }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

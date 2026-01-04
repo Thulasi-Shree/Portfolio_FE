@@ -27,11 +27,15 @@ export default function Navbar() {
   return (
     <>
       <Header
-        style={{
-          background: "#020617",
-          borderBottom: "1px solid #1e293b",
-          padding: "0 24px"
-        }}
+       style={{
+    position: "fixed",
+    top: 0,
+    width: "100%",
+    zIndex: 1000,
+    background: "#020617",
+    borderBottom: "1px solid #1e293b",
+    padding: "0 24px"
+  }}
       >
         <div
           style={{
