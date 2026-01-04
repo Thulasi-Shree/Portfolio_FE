@@ -229,7 +229,7 @@ export default function Home() {
                             }}
                             bodyStyle={{ padding: "28px" }}
                         >
-                            <Title level={4} style={{ color: "#38bdf8" }}>
+                            <Title level={4} style={{ color: "#1677ff" }}>
                                 Frontend
                             </Title>
                             <ul style={{ paddingLeft: "18px", color: "#cbd5f5" }}>
