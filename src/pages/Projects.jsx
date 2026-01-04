@@ -47,7 +47,7 @@ const projects = [
             "Nodemailer"
         ],
         type: "Full Stack Project",
-        demo: "https://<your-portfolio-domain>.vercel.app"
+        demo: "https://portfolio-fe-ten-gilt.vercel.app/"
     },
     {
         title: "PayPlus – Payroll Management System",
